@@ -1,73 +1,75 @@
-import React, { Component } from 'react';
+import { useState } from 'react';
+import calculate from './logic/calculate';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class Calc extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="calculator">
-          <div className="display">0</div>
-          <div className="display-buttons">
-            <div className="operators">
-              <button type="button">÷</button>
-              <button type="button">x</button>
-              <button type="button">-</button>
-              <button type="button">+</button>
-              <button type="button" id="equal">=</button>
-            </div>
+export default function DoCalculation() {
+  // res for result as we already have a variable called result in the calculator.js file
+  const [res, setResult] = useState({});
 
-            <div className="digits">
-              <button type="button" className="btn">
-                AC
-              </button>
-              <button type="button" className="btn">
-                +/-
-              </button>
-              <button type="button" className="btn">
-                %
-              </button>
+  const eventhandler = (e) => {
+    const b = e.target.textContent;
+    const calc = calculate(res, b);
+    setResult(calc);
+  };
 
-              <button type="button" className="btn">
-                7
-              </button>
-              <button type="button" className="btn">
-                8
-              </button>
-              <button type="button" className="btn">
-                9
-              </button>
-              <button type="button" className="btn">
-                4
-              </button>
-              <button type="button" className="btn">
-                5
-              </button>
+  const buttons = [
+    'AC',
+    '+/-',
+    '%',
+    '÷',
+    '7',
+    '8',
+    '9',
+    'x',
+    '4',
+    '5',
+    '6',
+    '-',
+    '1',
+    '2',
+    '3',
+    '+',
+    '0',
+    '.',
+    '=',
+  ];
 
-              <button type="button" className="btn">
-                6
-              </button>
-              <button type="button" className="btn">
-                1
-              </button>
-              <button type="button" className="btn">
-                2
-              </button>
-              <button type="button" className="btn">
-                3
-              </button>
-              <button type="button" className="zero">
-                0
-              </button>
-
-              <button type="button" className="point">
-                .
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+  const { next, total, operation } = res;
+  let result = '';
+  if (total) {
+    result = `${total} ${operation || ''} ${next || ''}`;
+  } else if (next) {
+    result = next;
   }
-}
 
-export default Calc;
+  function addClass(button) {
+    if (
+      button === '+'
+      || button === 'x'
+      || button === '-'
+      || button === '÷'
+      || button === '='
+    ) {
+      return 'different';
+    }
+    if (button === '0') {
+      return 'zero';
+    }
+    return '';
+  }
+  return (
+    <div>
+      <ul>
+        <li className="screen">
+          <h3>{result}</h3>
+        </li>
+        {buttons.map((btn) => (
+          <li className={`pad ${addClass(btn)}`} key={btn}>
+            <button key={btn} onClick={eventhandler} type="button">
+              {btn}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
