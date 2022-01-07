@@ -1,11 +1,11 @@
-import React from 'react';
-import DoCalculation from './components/Calculator';
-import './App.css';
+import react from 'react';
+// eslint-disable-next-line import/extensions
+import Calculator from './components/calculator';
 
-const App = () => (
-  <div className="App">
-    <DoCalculation />
-  </div>
-);
+class App extends react.Component {
+  render() {
+    return <Calculator />;
+  }
+}
 
 export default App;

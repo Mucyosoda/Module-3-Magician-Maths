@@ -1,7 +1,10 @@
+# Project Name
+Module 3 Maths Magician
 
-# Getting Started with Create React App
+> In this project Math Magician built in React to do simple calculation application like multiplication division substraction and addition operations.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It have one interface with three parts (numerical party, operator party and display part)
+> ![screenshoot](./Capture.PNG)
 
 ## Available Scripts
 

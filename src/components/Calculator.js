@@ -1,75 +1,47 @@
-import { useState } from 'react';
-import calculate from './logic/calculate';
+import React, { useState } from 'react';
+import './calculator.css';
+import calculate from '../logic/calculate';
 
-export default function DoCalculation() {
-  // res for result as we already have a variable called result in the calculator.js file
-  const [res, setResult] = useState({});
+const Calculator = () => {
+  const [object, setObject] = useState({});
 
-  const eventhandler = (e) => {
-    const b = e.target.textContent;
-    const calc = calculate(res, b);
-    setResult(calc);
+  const ifClicked = (e) => {
+    const buttonName = e.target.textContent;
+    const newObj = calculate(object, buttonName);
+    setObject(newObj);
   };
 
-  const buttons = [
-    'AC',
-    '+/-',
-    '%',
-    '÷',
-    '7',
-    '8',
-    '9',
-    'x',
-    '4',
-    '5',
-    '6',
-    '-',
-    '1',
-    '2',
-    '3',
-    '+',
-    '0',
-    '.',
-    '=',
-  ];
+  const buttonNames = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x',
+    '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
 
-  const { next, total, operation } = res;
+  const getClassName = (button) => {
+    if (button === '÷' || button === 'x' || button === '-' || button === '+' || button === '=') {
+      return 'orange-button';
+    }
+
+    if (button === '0') {
+      return 'big-space';
+    }
+    return '';
+  };
+
+  const { next, total, operation } = object;
   let result = '';
   if (total) {
     result = `${total} ${operation || ''} ${next || ''}`;
   } else if (next) {
     result = next;
   }
-
-  function addClass(button) {
-    if (
-      button === '+'
-      || button === 'x'
-      || button === '-'
-      || button === '÷'
-      || button === '='
-    ) {
-      return 'different';
-    }
-    if (button === '0') {
-      return 'zero';
-    }
-    return '';
-  }
   return (
-    <div>
-      <ul>
-        <li className="screen">
-          <h3>{result}</h3>
-        </li>
-        {buttons.map((btn) => (
-          <li className={`pad ${addClass(btn)}`} key={btn}>
-            <button key={btn} onClick={eventhandler} type="button">
-              {btn}
-            </button>
-          </li>
-        ))}
-      </ul>
+    <div className="calc-container">
+      <div className="calc-screen">
+        {result}
+      </div>
+      <div className="buttons">
+        {buttonNames.map((button) => (<button key={button} className={getClassName(button)} onClick={ifClicked} type="button">{button}</button>))}
+      </div>
     </div>
   );
-}
+};
+
+export default Calculator;
