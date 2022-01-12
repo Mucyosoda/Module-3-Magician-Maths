@@ -1,10 +1,18 @@
-# Project Name
-Module 3 Maths Magician
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# Maths Magician
 
 > In this project Math Magician built in React to do simple calculation application like multiplication division substraction and addition operations.
 
-It have one interface with three parts (numerical party, operator party and display part)
-> ![screenshoot](./Capture.PNG)
+It have one interface with three parts (numerical party, operator party and display part).
+
+> The project consisting of 3 pages: Home, Calculator, and Quote.
+
+> ![screenshoot](./Appscreenshoot.PNG)
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -62,4 +70,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-

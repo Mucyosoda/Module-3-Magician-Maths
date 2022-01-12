@@ -1,11 +1,24 @@
-import react from 'react';
-// eslint-disable-next-line import/extensions
-import Calculator from './components/calculator';
+import { Switch, Route } from 'react-router-dom';
+import Calculator from './Components/Calculator';
+import Header from './Components/header';
+import Quote from './Components/quotePage';
+import Welcome from './Components/welcome';
 
-class App extends react.Component {
-  render() {
-    return <Calculator />;
-  }
-}
+const App = () => (
+  <>
+    <Header />
+    <Switch>
+      <Route path="/" exact>
+        <Welcome />
+      </Route>
+      <Route path="/calculator">
+        <Calculator />
+      </Route>
+      <Route path="/quote">
+        <Quote />
+      </Route>
+    </Switch>
+  </>
+);
 
 export default App;
