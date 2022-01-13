@@ -10,6 +10,20 @@ It have one interface with three parts (numerical party, operator party and disp
 
 > ![screenshoot](./Appscreenshoot.PNG)
 
+Additional description about the project and its features.
+
+## Built With
+
+- REACT
+- LINTER
+- WEBPACK
+- BABELRC
+
+## Live Demo
+
+[link to my profile](https://mucyosoda.github.io/setup-and-mobile-version-skeleton/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
