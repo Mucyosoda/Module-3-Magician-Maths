@@ -1,7 +1,7 @@
 .calc-container {
   width: 35%;
   margin: 0 auto;
-  margin-top: 8rem;
+  margin-top: 2rem;
 }
 
 .calc-screen {
@@ -29,7 +29,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(209, 150, 150);
+  background-color: rgb(145, 137, 137);
 }
 
 .buttons .orange-button {
@@ -37,7 +37,7 @@ button:hover {
 }
 
 .buttons .orange-button:hover {
-  background-color: rgb(230, 223, 223);
+  background-color: rgb(145, 137, 137);
 }
 
 .buttons .big-space {
@@ -47,4 +47,9 @@ button:hover {
 
 button.orange-button {
   background-color: rgb(223, 205, 171);
+}
+
+.mathshead {
+  font-size: large;
+  font-weight: bold;
 }
