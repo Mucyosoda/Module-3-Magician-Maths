@@ -21,7 +21,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[link to my profile](https://mucyosoda.github.io/setup-and-mobile-version-skeleton/)
+[link to Math Magician](https://module3-math-magician.netlify.app/)
 
 
 # Getting Started with Create React App
@@ -84,3 +84,49 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+npm/yarn installed
+
+### Setup
+clone the repo: git clone git@github.com:Marcraphael12/Marc-the-magician.git
+jump to the active branch: git checkout setup-react
+### Install
+in the terminal, run: npm installor npm i
+### Usage
+now run npm startto start the app
+### Run tests
+Author only
+### Deployment
+This project was deployed on Netlify 
+
+
+## Authors
+
+👤 **Mucyo Claude**
+
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
