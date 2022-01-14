@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Maths Magician
+# Maths Magician Test
 
 > In this project Math Magician built in React to do simple calculation application like multiplication division substraction and addition operations.
 
