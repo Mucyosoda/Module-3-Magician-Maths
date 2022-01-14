@@ -106,6 +106,7 @@ This project was deployed on Netlify
 ## Authors
 
 👤 **Mucyo Claude**
+👤 **Radmila Stojceva**
 
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
