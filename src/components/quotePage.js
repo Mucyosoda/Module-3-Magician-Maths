@@ -1,21 +1,17 @@
 import React from 'react';
 import styles from './Quote.css';
 
-const Quote = () => (
+const quote = () => (
   <p className={styles.quote}>
-    Mathematics is not about numbers, equations, computations or algorithm:
-    It is about understanding- Williams Paul Thurston.
+    A paragraph is a series of sentences that are organized and coherent, and are all
+    related to a single topic. Almost every piece of writing you do that is longer than a few
+    sentences should be organized into paragraphs.
     <br />
     <br />
-    Without mathematics, there’s nothing you can do. Everything around you is mathematics.
-    Everything around you is numbers.
-    — Shakuntala Devi,
+    sentences that are organized and coherent, and are all ra s
     <br />
-    <br />
-    As far as the laws of mathematics refer to reality, they are not certain,
-    and as far as they are certain,they do not refer to reality.
-    — Albert Einstein
+    Math Magicians
   </p>
 );
 
-export default Quote;
+export default quote;
