@@ -1,4 +1,5 @@
 import { Switch, Route } from 'react-router-dom';
+// eslint-disable-line import/extensions
 import Calculator from './Components/Calculator';
 import Header from './Components/header';
 import Quote from './Components/quotePage';
