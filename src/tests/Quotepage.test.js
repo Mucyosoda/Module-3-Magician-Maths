@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Calculator from './Calculator';
+import Quote from '../Components/quotePage';
 
-it('calculator snapshot test', () => {
+it('Quotes snapshot test', () => {
   const tree = renderer
-    .create(<Calculator />)
+    .create(<Quote />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
