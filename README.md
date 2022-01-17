@@ -22,7 +22,7 @@ Additional description about the project and its features.
 ## Live Demo
 
 [link to Math Magician](https://module3-math-magician.netlify.app/)
-
+[link to Math Magician](https://math-magician-full-web.herokuapp.com/)
 
 # Getting Started with Create React App
 
