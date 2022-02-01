@@ -19,6 +19,8 @@ Additional description about the project and its features.
 - WEBPACK
 - BABELRC
 - test
+- JavaScript
+- CSS
 
 ## Live Demo
 
