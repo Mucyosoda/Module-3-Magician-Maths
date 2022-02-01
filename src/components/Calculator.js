@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './calculator.css';
-import calculate from '../logic/calculate';
+import calculate from './logic/calculate';
 
 const Calculator = () => {
   const [object, setObject] = useState({});
@@ -11,11 +11,36 @@ const Calculator = () => {
     setObject(newObj);
   };
 
-  const buttonNames = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x',
-    '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
+  const buttonNames = [
+    'AC',
+    '+/-',
+    '%',
+    '÷',
+    '7',
+    '8',
+    '9',
+    'x',
+    '4',
+    '5',
+    '6',
+    '-',
+    '1',
+    '2',
+    '3',
+    '+',
+    '0',
+    '.',
+    '=',
+  ];
 
   const getClassName = (button) => {
-    if (button === '÷' || button === 'x' || button === '-' || button === '+' || button === '=') {
+    if (
+      button === '÷'
+      || button === 'x'
+      || button === '-'
+      || button === '+'
+      || button === '='
+    ) {
       return 'orange-button';
     }
 
@@ -34,14 +59,21 @@ const Calculator = () => {
   }
   return (
     <div>
-      <h3 className="mathshead">Lets do some Maths</h3>
+      <h3 className="mathshead">Calculator</h3>
       <div className="calc-container">
         <div>
-          <div className="calc-screen">
-            {result}
-          </div>
+          <div className="calc-screen">{result}</div>
           <div className="buttons">
-            {buttonNames.map((button) => (<button key={button} className={getClassName(button)} onClick={ifClicked} type="button">{button}</button>))}
+            {buttonNames.map((button) => (
+              <button
+                key={button}
+                className={getClassName(button)}
+                onClick={ifClicked}
+                type="button"
+              >
+                {button}
+              </button>
+            ))}
           </div>
         </div>
       </div>
